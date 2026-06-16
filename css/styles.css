@@ -51,10 +51,30 @@ footer a {
 .linkedin-link {
   display: block;
   margin-top: 10px;
-  color: #FFFFFF; /* High visibility white */
-  text-decoration: underline; /* Clear link indicator */
+  color: #FFFFFF; 
+  text-decoration: underline; 
 }
 
 .linkedin-link:hover {
   color: var(--accent-red);
+}
+
+/* Styles for the button added below */
+.button-container { 
+  margin-top: 20px; 
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-red);
+  color: white;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.cta-button:hover { 
+  background-color: #cc0000; 
+  text-decoration: none; 
 }
