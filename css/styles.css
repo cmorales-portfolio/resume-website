@@ -1,3 +1,4 @@
+/* OSCARS RED CARPET THEME */
 :root {
   --oscar-gold: #D4AF37;
   --velvet-red: #8B0000;
@@ -7,8 +8,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  /* Matches Film-Image.jpeg located in your main root folder */
-  background: url('../Film-Image.jpeg') no-repeat center center fixed; 
+  /* Image is now in the same folder as this CSS file */
+  background: url('Film-Image.jpeg') no-repeat center center fixed; 
   background-size: cover;
   min-height: 100vh;
 }
@@ -34,11 +35,28 @@ body {
   text-align: center;
 }
 
-h1 { font-family: 'Playfair Display', serif; color: var(--velvet-red); font-size: 5rem; margin-top: 0; }
-h2 { font-family: 'Playfair Display', serif; color: #333; font-size: 2.2rem; }
+h1 { 
+  font-family: 'Playfair Display', serif; 
+  color: var(--velvet-red); 
+  font-size: 5rem; 
+  margin-top: 0; 
+}
 
-a { color: var(--velvet-red); font-weight: bold; text-decoration: none; }
-a:hover { text-decoration: underline; }
+h2 { 
+  font-family: 'Playfair Display', serif; 
+  color: #333; 
+  font-size: 2.2rem; 
+}
+
+a { 
+  color: var(--velvet-red); 
+  font-weight: bold; 
+  text-decoration: none; 
+}
+
+a:hover { 
+  text-decoration: underline; 
+}
 
 footer {
   background: rgba(0, 0, 0, 0.8);
