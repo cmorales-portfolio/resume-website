@@ -1,8 +1,7 @@
 :root {
   --text-white: #FFFFFF;
-  --text-light-gray: #CCCCCC;
   --accent-red: #FF0000;
-  --bg-dark: #121212;
+  --bg-dark: #000000;
   --box-dark: #1E1E1E;
 }
 
@@ -40,30 +39,22 @@ a:hover { text-decoration: underline; }
 
 footer { 
   text-align: center; 
-  padding: 30px; 
-  color: var(--text-light-gray); 
+  padding: 40px 20px; 
+  color: #555; 
   font-size: 0.9rem;
 }
 
 footer a { 
   color: var(--accent-red); 
-  font-weight: bold;
 }
 
 .linkedin-link {
   display: block;
-  margin-top: 15px;
-  color: var(--text-white);
-  text-decoration: underline;
+  margin-top: 10px;
+  color: #FFFFFF; /* High visibility white */
+  text-decoration: underline; /* Clear link indicator */
 }
 
 .linkedin-link:hover {
   color: var(--accent-red);
 }
-
-.cta-button:hover {
-  background-color: var(--oscar-gold);
-}
-
-footer { color: white; text-align: center; padding: 20px; }
-footer a { color: white; }
