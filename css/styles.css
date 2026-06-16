@@ -9,6 +9,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
+  
+  /* Background properties for Filmstrip.jpg */
+  background-image: url('../images/Filmstrip.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  
   background-color: var(--bg-dark);
   color: var(--text-white);
   min-height: 100vh;
@@ -37,32 +45,9 @@ h2 { color: var(--accent-red); font-size: 1.5rem; }
 a { color: var(--accent-red); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-footer { 
-  text-align: center; 
-  padding: 40px 20px; 
-  color: #555; 
-  font-size: 0.9rem;
-}
-
-footer a { 
-  color: var(--accent-red); 
-}
-
-.linkedin-link {
-  display: block;
-  margin-top: 10px;
-  color: #FFFFFF; 
-  text-decoration: underline; 
-}
-
-.linkedin-link:hover {
-  color: var(--accent-red);
-}
-
-/* Styles for the button added below */
 .button-container { 
   margin-top: 20px; 
-  text-align: center;
+  text-align: center; 
 }
 
 .cta-button {
@@ -78,4 +63,26 @@ footer a {
 .cta-button:hover { 
   background-color: #cc0000; 
   text-decoration: none; 
+}
+
+footer { 
+  text-align: center; 
+  padding: 40px 20px; 
+  color: #555; 
+  font-size: 0.9rem;
+}
+
+footer a { 
+  color: var(--accent-red); 
+}
+
+.linkedin-link {
+  display: block;
+  margin-top: 10px;
+  color: #FFFFFF; 
+  text-decoration: underline;
+}
+
+.linkedin-link:hover {
+  color: var(--accent-red);
 }
