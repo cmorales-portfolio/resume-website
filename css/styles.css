@@ -1,52 +1,49 @@
-/* CINEMATIC DARK THEME */
 :root {
-  --bg-dark: #0a0a0a;
-  --bg-secondary: #1a1a1a;
-  --text-main: #f0f0f0;
-  --accent: #e50914; /* Cinematic Red */
+  --oscar-gold: #D4AF37;
+  --velvet-red: #8B0000;
 }
 
-html { box-sizing: border-box; font-size: 62.5%; }
-body { 
-  background: var(--bg-dark); 
-  color: var(--text-main); 
-  font-family: 'Inter', sans-serif; 
-  font-size: 1.6rem; 
-  line-height: 1.6; 
-  margin: 0; 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: url('Red-Curtain.jpeg') no-repeat center center fixed; 
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  min-height: 100vh;
 }
 
-h1, h2, h3 { 
-  font-family: 'Montserrat', sans-serif; 
-  text-transform: uppercase; 
-  letter-spacing: 0.15rem; 
-  font-weight: 700; 
-  margin: 0; 
+.content-wrapper {
+  margin: 0 auto;
+  padding: 50px 20px;
+  max-width: 900px;
 }
-h1 { font-size: 6rem; line-height: 1.1; color: #fff; }
-h2 { font-size: 2.4rem; color: var(--accent); margin-bottom: 2rem; }
 
-a { color: var(--accent); text-decoration: none; transition: 0.3s; }
-a:hover { color: #fff; }
+.content-bg {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border: 5px solid var(--oscar-gold);
+  text-align: center;
+  border-radius: 8px;
+}
 
-.content-wrapper { margin: 0 auto; padding: 40px; max-width: 900px; }
-.content-bg { background: var(--bg-secondary); padding: 40px; border-left: 4px solid var(--accent); }
+h1 { color: var(--oscar-gold); font-size: 4rem; margin-top: 0; }
 
-.btn {
+.cta-button {
   display: inline-block;
-  background: transparent;
-  border: 2px solid var(--accent);
-  color: var(--text-main);
-  padding: 12px 24px;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-weight: 600;
-  transition: 0.3s;
+  background-color: var(--velvet-red);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
 }
-.btn:hover { background: var(--accent); cursor: pointer; }
 
-footer { background: #000; border-top: 1px solid #333; padding: 40px 20px; text-align: center; }
-.socials { list-style: none; padding: 0; }
-.socials li { display: inline-block; }
-.socials img { width: 32px; filter: grayscale(100%); transition: 0.3s; }
-.socials img:hover { filter: grayscale(0%); }
+.cta-button:hover {
+  background-color: var(--oscar-gold);
+}
+
+footer { color: white; text-align: center; padding: 20px; }
+footer a { color: white; }
