@@ -37,18 +37,6 @@ h2 { color: var(--accent-red); font-size: 1.5rem; }
 a { color: var(--accent-red); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Styles for the "Get in Touch" button */
-.button-container { margin-top: 20px; }
-.cta-button {
-  display: inline-block;
-  background-color: var(--accent-red);
-  color: white;
-  padding: 12px 25px;
-  font-weight: bold;
-  border-radius: 4px;
-}
-.cta-button:hover { background-color: #cc0000; text-decoration: none; }
-
 footer { 
   text-align: center; 
   padding: 40px 20px; 
@@ -56,14 +44,38 @@ footer {
   font-size: 0.9rem;
 }
 
-footer a { color: var(--accent-red); }
+footer a { 
+  color: var(--accent-red); 
+}
 
 .linkedin-link {
   display: block;
   margin-top: 10px;
   color: #FFFFFF; 
-  text-decoration: underline;
+  text-decoration: underline; 
 }
 
-.linkedin-link:hover { color: var(--accent-red); }
+.linkedin-link:hover {
+  color: var(--accent-red);
+}
+
+/* Styles for the button added below */
+.button-container { 
+  margin-top: 20px; 
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-red);
+  color: white;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.cta-button:hover { 
+  background-color: #cc0000; 
+  text-decoration: none; 
+}
 
