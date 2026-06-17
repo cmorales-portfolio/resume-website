@@ -1,129 +1,71 @@
 :root {
-  /* High visibility White and Accent Red */
   --text-white: #FFFFFF;
   --accent-red: #FF0000;
-  
-  /* Deep and Rich Blended Backgrounds */
-  --blended-charcoal: #1E1E1E; /* Blended dark content card */
-  --deep-terracotta: #662200;  /* Sub-panel base for footer */
-  --glow-amber: #AA4400;      /* Subtle border-left glow */
+  /* Added a dark overlay variable for readability */
+  --bg-overlay: rgba(0, 0, 0, 0.85); 
 }
 
 body {
   margin: 0;
   padding: 0;
-  /* Font consistent with professional design */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: var(--text-white);
+  font-family: 'Arial', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
-  /* Smooth Amber-Terracotta Gradient and Filmstrip */
-  background: 
-    url('../images/Filmstrip.jpg') center top / cover no-repeat fixed, /* Base filmstrip */
-    linear-gradient(to bottom right, #FFCC00 0%, #FF9900 30%, #CC3300 70%, #662200 100%); /* The gradient itself */
+  /* Filmstrip background */
+  background: url('../images/Filmstrip.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-.main-container {
+.content-wrapper {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 30px;
+  padding: 40px 20px;
 }
 
-.content-wrapper {
-  max-width: 900px; /* Overall layout width control */
-  width: 100%;
+.content-box {
+  /* This dark overlay makes the text readable against ANY background */
+  background-color: var(--bg-overlay);
+  padding: 50px;
+  max-width: 800px;
+  border-left: 8px solid var(--accent-red);
 }
 
-.profile-card {
-  background-color: var(--blended-charcoal); /* Matches blended card color */
-  padding: 0; /* Resetting padding for inner bar */
-  display: flex;
-  border-radius: 8px; /* Smooth card edges */
-  overflow: hidden; /* Ensure red bar doesn't bleed */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Soft depth */
-  border-left: 8px solid var(--accent-red); /* High visual bar on left */
-  position: relative; /* Setup for internal positioning */
-}
+h1 { color: var(--text-white); font-size: 3rem; margin-top: 0; }
+h2 { color: var(--accent-red); font-size: 1.5rem; }
 
-/* Red Vertical Bar Style */
-.red-bar {
-  width: 8px;
-  background-color: var(--accent-red);
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+p { color: var(--text-white); line-height: 1.6; }
+a { color: var(--accent-red); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-.content-text-area {
-  padding: 50px 60px 60px 70px; /* Padding inside the text zone */
-  flex: 1; /* Occupy remaining card width */
-}
-
-/* Red Text Elements for Titles and Links */
-.main-name { color: var(--text-white); font-size: 3.2rem; margin: 0 0 15px; font-weight: 700; }
-.sub-headline { color: var(--accent-red); font-size: 1.6rem; font-weight: 700; margin-bottom: 25px; line-height: 1.3; }
-
-/* Blended Text Styles */
-.summary-paragraph { color: var(--text-white); font-size: 1rem; line-height: 1.7; margin-bottom: 20px; font-weight: 300; text-align: left; }
-.cta-paragraph { color: var(--text-white); font-size: 1.1rem; line-height: 1.7; font-weight: 300; text-align: left; }
-
-/* Inline Red Resume Link */
-.resume-link { color: var(--accent-red); text-decoration: none; font-weight: bold; }
-.resume-link:hover { text-decoration: underline; }
-
-/* Blended Deep Red Button */
-.button-wrapper { margin-top: 35px; text-align: center; } /* Centers the button */
-
-.main-cta-button {
+.button-container { margin-top: 30px; text-align: center; }
+.cta-button {
   display: inline-block;
-  background-color: var(--accent-red); /* Glossy and deep */
-  color: var(--text-white);
-  padding: 14px 40px;
-  font-weight: 700;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Subtle depth */
-}
-
-.main-cta-button:hover {
-  background-color: #CC0000; /* Subtle red darken on hover */
+  background-color: var(--accent-red);
+  color: white;
+  padding: 15px 30px;
+  font-weight: bold;
+  border-radius: 5px;
   text-decoration: none;
 }
+.cta-button:hover { background-color: #cc0000; }
 
-/* Footer with Maximum Visibility White Text */
-.main-footer { 
+footer { 
   text-align: center; 
-  background-color: var(--deep-terracotta); /* Grounding footer panel */
-  padding: 30px 20px 40px; 
+  padding: 20px; 
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 0.9rem;
 }
 
-/* Grounding Footer Panel (added structure) */
-.footer-blend-sub-panel {
-  color: var(--text-white); /* Crisp white text against terracotta */
-  font-size: 1rem;
-}
+footer a { color: var(--accent-red); }
 
-/* Footer Links Style */
-.copyright-info a,
-.footer-email-link,
-.linkedin-profile-link {
-  color: var(--text-white); /* Ensures links are bright white */
-  text-decoration: underline; /* Makes link explicit */
-  font-weight: 400;
-}
-
-.footer-email-link:hover,
-.linkedin-profile-link:hover { 
-  color: var(--accent-red); /* Quick red glow on hover */
-}
-
-/* Copyright line spacing */
-.copyright-info {
-  margin: 0 0 10px;
+.linkedin-link {
+  display: block;
+  margin-top: 10px;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight: bold;
 }
