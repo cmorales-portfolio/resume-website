@@ -1,68 +1,97 @@
-:root {
-  --text-white: #FFFFFF;
-  --accent-red: #FF0000;
-  --bg-dark: #000000;
-  --box-dark: #1E1E1E;
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #ff8a00, #ffca28);
+  padding: 80px 20px;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-white);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('film-strip.png') repeat-x bottom center;
+  opacity: 0.15;
+  pointer-events: none;
 }
 
-.content-wrapper {
-  flex: 1;
+.hero-overlay {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.intro p {
+  margin-bottom: 18px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.cta-buttons {
+  margin-top: 25px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
+  gap: 15px;
 }
 
-.content-box {
-  background-color: var(--box-dark);
-  padding: 50px;
-  max-width: 800px;
-  border-left: 8px solid var(--accent-red);
+.btn {
+  padding: 12px 24px;
+  background: #ffca28;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-h1 { color: var(--text-white); font-size: 3rem; margin-top: 0; }
-h2 { color: var(--accent-red); font-size: 1.5rem; }
-
-a { color: var(--accent-red); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* Styles for the "Get in Touch" button */
-.button-container { margin-top: 20px; }
-.cta-button {
-  display: inline-block;
-  background-color: var(--accent-red);
-  color: white;
-  padding: 12px 25px;
-  font-weight: bold;
-  border-radius: 4px;
-}
-.cta-button:hover { background-color: #cc0000; text-decoration: none; }
-
-footer { 
-  text-align: center; 
-  padding: 40px 20px; 
-  color: #555; 
-  font-size: 0.9rem;
+.btn:hover {
+  background: #ffe082;
 }
 
-footer a { color: var(--accent-red); }
-
-.linkedin-link {
-  display: block;
-  margin-top: 10px;
-  color: #FFFFFF; 
-  text-decoration: underline;
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #ffca28;
+  color: #ffca28;
 }
 
-.linkedin-link:hover { color: var(--accent-red); }
+.btn.secondary:hover {
+  background: #ffca28;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero-overlay {
+    padding: 25px 20px;
+  }
+}
+
