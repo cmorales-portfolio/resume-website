@@ -1,20 +1,19 @@
 :root {
   --text-white: #FFFFFF;
   --accent-red: #FF0000;
-  /* Added a dark overlay variable for readability */
-  --bg-overlay: rgba(0, 0, 0, 0.85); 
+  --bg-dark: #000000;
+  --box-dark: #1E1E1E;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* Filmstrip background */
-  background: url('../images/Filmstrip.jpg') no-repeat center center fixed;
-  background-size: cover;
 }
 
 .content-wrapper {
@@ -26,8 +25,7 @@ body {
 }
 
 .content-box {
-  /* This dark overlay makes the text readable against ANY background */
-  background-color: var(--bg-overlay);
+  background-color: var(--box-dark);
   padding: 50px;
   max-width: 800px;
   border-left: 8px solid var(--accent-red);
@@ -36,27 +34,25 @@ body {
 h1 { color: var(--text-white); font-size: 3rem; margin-top: 0; }
 h2 { color: var(--accent-red); font-size: 1.5rem; }
 
-p { color: var(--text-white); line-height: 1.6; }
 a { color: var(--accent-red); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.button-container { margin-top: 30px; text-align: center; }
+/* Styles for the "Get in Touch" button */
+.button-container { margin-top: 20px; }
 .cta-button {
   display: inline-block;
   background-color: var(--accent-red);
   color: white;
-  padding: 15px 30px;
+  padding: 12px 25px;
   font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
+  border-radius: 4px;
 }
-.cta-button:hover { background-color: #cc0000; }
+.cta-button:hover { background-color: #cc0000; text-decoration: none; }
 
 footer { 
   text-align: center; 
-  padding: 20px; 
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
+  padding: 40px 20px; 
+  color: #555; 
   font-size: 0.9rem;
 }
 
@@ -65,7 +61,8 @@ footer a { color: var(--accent-red); }
 .linkedin-link {
   display: block;
   margin-top: 10px;
-  color: #FFFFFF;
+  color: #FFFFFF; 
   text-decoration: underline;
-  font-weight: bold;
 }
+
+.linkedin-link:hover { color: var(--accent-red); }
