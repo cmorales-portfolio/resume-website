@@ -1,16 +1,22 @@
 :root {
-  --text-white: #FFFFFF;
-  --accent-red: #FF0000;
-  --bg-dark: #000000;
-  --box-dark: #1E1E1E;
+  /* High-contrast dark colors for readability on the photo background */
+  --text-dark: #2c3e50; 
+  --accent-blue: #2980b9; /* A professional, industry-standard accent */
+  --box-bg: rgba(255, 255, 255, 0.85); /* Semi-transparent light box */
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-white);
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  
+  /* Applying the image */
+  background-image: url('bg-movie photography studio.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  color: var(--text-dark);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,58 +31,35 @@ body {
 }
 
 .content-box {
-  background-color: var(--box-dark);
+  background-color: var(--box-bg);
   padding: 50px;
   max-width: 800px;
-  border-left: 8px solid var(--accent-red);
+  border-radius: 12px;
+  /* Replaced the red border with a subtle blue to match the production vibe */
+  border-left: 8px solid var(--accent-blue);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-h1 { color: var(--text-white); font-size: 3rem; margin-top: 0; }
-h2 { color: var(--accent-red); font-size: 1.5rem; }
+h1 { color: #1a252f; font-size: 3rem; margin-top: 0; }
+h2 { color: var(--accent-blue); font-size: 1.5rem; }
 
-a { color: var(--accent-red); text-decoration: none; }
+a { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
 a:hover { text-decoration: underline; }
 
 footer { 
   text-align: center; 
-  padding: 40px 20px; 
-  color: #555; 
+  padding: 30px; 
+  color: #333;
   font-size: 0.9rem;
-}
-
-footer a { 
-  color: var(--accent-red); 
-}
-
-.linkedin-link {
-  display: block;
-  margin-top: 10px;
-  color: #FFFFFF; 
-  text-decoration: underline; 
-}
-
-.linkedin-link:hover {
-  color: var(--accent-red);
-}
-
-/* Styles for the button added below */
-.button-container { 
-  margin-top: 20px; 
-  text-align: center; 
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .cta-button {
-  display: inline-block;
-  background-color: var(--accent-red);
-  color: white;
+  background-color: var(--accent-blue);
+  color: white; /* Button text stays white for contrast */
   padding: 12px 25px;
-  font-weight: bold;
   border-radius: 4px;
-  text-decoration: none;
-}
-
-.cta-button:hover { 
-  background-color: #cc0000; 
-  text-decoration: none; 
+  display: inline-block;
+  font-weight: bold;
 }
 
