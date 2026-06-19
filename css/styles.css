@@ -48,10 +48,11 @@ a:hover { text-decoration: underline; }
 
 footer { 
   text-align: center; 
-  padding: 30px; 
-  color: #333;
+  padding: 20px; 
+  background: rgba(255, 255, 255, 0.7); /* Adds a light semi-transparent background */
+  color: #333; 
   font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.7);
+  margin-top: 20px;
 }
 
 .cta-button {
