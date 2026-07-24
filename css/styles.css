@@ -5,21 +5,28 @@
   --box-bg: rgba(255, 255, 255, 0.85); /* Semi-transparent light box */
 }
 
+/* Base styles applied to all pages */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  
-  /* Applying the image */
-  background-image: url('bg-movie photography studio.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  
   color: var(--text-dark);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Background image applied ONLY to the homepage */
+.home-page {
+  background-image: url('bg-movie photography studio.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Solid background color applied ONLY to the resume page */
+.resume-page {
+  background-color: #f4f4f4;
 }
 
 .content-wrapper {
