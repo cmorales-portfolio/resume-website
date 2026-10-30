@@ -42,14 +42,15 @@
         </div>
       </section>
 
-      <!-- SEPARATED SINGLE COLUMN DESIGN FOR SKIN WALKER -->
+      <!-- RESTRUCTURED TO SPLIT ROW TO MATCH ORIGINAL SCREENSHOT INTENT -->
       <section class="resume-section layout-break-clear">
         <h2>Other Film Projects</h2>
 
-        <div class="skin-walker-standalone-block">
-          <section class="project-item" style="width: 100%; max-width: 100%;">
-            <!-- FIXED: EXPLICIT 500PX IMAGE DIMENSION CONSTRAINT CONTROL -->
-            <img src="images/skinwalker-500px.jpg" srcset="images/skinwalker-1000px.jpg 2x" alt="The Skin Walker" style="max-width: 500px !important; width: 100% !important; height: 350px !important; min-height: 350px !important; object-fit: cover !important; display: block !important; margin-bottom: 15px; border-radius: 4px;">
+        <div class="skin-walker-split-card">
+          <div class="skin-walker-left-img-col">
+            <img src="images/skinwalker-500px.jpg" srcset="images/skinwalker-1000px.jpg 2x" alt="The Skin Walker" class="skin-walker-responsive-img">
+          </div>
+          <div class="skin-walker-right-text-col">
              <h3>"The Skin Walker" | Feature Film Pitch Deck </h3>
              <p><strong>Based on the historical aftermath of the Jonestown massacre, The Skin Walker is a supernatural horror-thriller following a military base maintenance worker who must confront the vengeful, murderous spirit of cult leader Jim Jones.</strong></p>
              <p>When the bodies of the Jonestown victims are temporarily stored at Fort MacArthur, the base becomes ground zero for a malicious haunting. Decades later, as a series of gruesome "accidental" deaths claims his maintenance crew, a worker must team up with real-world paranormal investigators and a Jesuit priest to exorcise the evil entity before it destroys his life and livelihood.</p>
@@ -60,7 +61,7 @@
                <li><strong>Locations & Production Scale:</strong>Explores the atmospheric settings, focusing on the historical infrastructure of Fort MacArthur.</li>
                <li><strong>Business Strategy:</strong>A comprehensive roadmap detailing the funding structure, distribution strategy, and marketing social strategy.</li>
              </ul>
-          </section>
+          </div>
         </div>
       </section>
 
@@ -71,10 +72,30 @@
             display: block !important;
             width: 100% !important;
         }
-        .skin-walker-standalone-block {
-            width: 100%;
-            display: block;
-            margin-top: 20px;
+        .skin-walker-split-card {
+            display: flex !important;
+            flex-direction: row !important;
+            width: 100% !important;
+            gap: 30px !important;
+            align-items: flex-start !important;
+            margin-top: 20px !important;
+        }
+        .skin-walker-left-img-col {
+            flex: 0 0 350px !important; /* Locks width size dimensions */
+            max-width: 350px !important;
+        }
+        .skin-walker-responsive-img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 4px !important;
+        }
+        .skin-walker-right-text-col {
+            flex: 1 !important;
+        }
+        .skin-walker-right-text-col h3 {
+            margin-top: 0 !important;
+            margin-bottom: 10px !important;
         }
         .skin-walker-specs {
             margin-top: 15px;
@@ -83,6 +104,19 @@
         .skin-walker-specs li {
             margin-bottom: 8px;
             line-height: 1.6;
+        }
+
+        /* Responsive collapse for tablet/mobile viewing */
+        @media (max-width: 768px) {
+            .skin-walker-split-card {
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+            .skin-walker-left-img-col {
+                flex: 1 1 100% !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
         }
       </style>
      
