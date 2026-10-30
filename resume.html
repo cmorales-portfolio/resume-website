@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Claudia Morales | Film Production Management Graduate</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="resume">
@@ -46,6 +46,7 @@
       <section class="resume-section layout-break-clear">
         <h2>Other Film Projects</h2>
 
+        <!-- PROJECT 1: THE SKIN WALKER -->
         <div class="skin-walker-split-card">
           <div class="skin-walker-left-img-col">
             <img src="images/skinwalker-500px.jpg" srcset="images/skinwalker-1000px.jpg 2x" alt="The Skin Walker" class="skin-walker-responsive-img">
@@ -60,6 +61,27 @@
                <li><strong>Character Breakdown:</strong>Profiles the central and supporting characters driving the emotional and physical conflict of the story.</li>
                <li><strong>Locations & Production Scale:</strong>Explores the atmospheric settings, focusing on the historical infrastructure of Fort MacArthur.</li>
                <li><strong>Business Strategy:</strong>A comprehensive roadmap detailing the funding structure, distribution strategy, and marketing social strategy.</li>
+             </ul>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: STOP-MOTION ANIMATION SHORTS (VIDEO REMOVED & REPLACED WITH SECURE DESIGNER TILE) -->
+        <div class="skin-walker-split-card" style="margin-top: 50px !important;">
+          <div class="skin-walker-left-img-col">
+            <!-- PURE CODE GRAPHIC FRAME TILE -->
+            <div class="stop-motion-placeholder-box">
+              <span class="placeholder-emoji">🎬</span>
+              <span class="placeholder-tag">Stop-Motion Production Shorts</span>
+            </div>
+          </div>
+          <div class="skin-walker-right-text-col">
+             <h3>Production Coordinator | Independent Project</h3>
+             <p><strong>"Stop-Motion Animation Shorts" (2022)</strong></p>
+             <p>Managed operational pipelines and tactical asset workflows for an independent, multi-character stop-motion miniature production.</p>
+             <ul class="skin-walker-specs">
+               <li><strong>Production Management:</strong> Organized frame continuity pipelines for an independent short tracking two toy-like transformer figures moving like real people.</li>
+               <li><strong>Dialogue & Action Sync:</strong> Maintained frame logs to ensure character dialogue synchronized seamlessly right as the figures broke into an intense fighting sequence on top of a desk.</li>
+               <li><strong>Asset Tracking & Management:</strong> Handled inventory breakdowns for the physical transformer figures, interchangeable parts, and the desktop miniature environment layout.</li>
              </ul>
           </div>
         </div>
@@ -90,6 +112,33 @@
             display: block !important;
             border-radius: 4px !important;
         }
+        /* Custom clean design layout placeholder card box styles */
+        .stop-motion-placeholder-box {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, #2a2d32 0%, #111315 100%);
+            border: 1px solid #3a3d42;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #a0a6b2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .placeholder-emoji {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+        .placeholder-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #8a909d;
+            text-align: center;
+            padding: 0 10px;
+        }
         .skin-walker-right-text-col {
             flex: 1 !important;
         }
@@ -116,6 +165,9 @@
                 flex: 1 1 100% !important;
                 max-width: 100% !important;
                 width: 100% !important;
+            }
+            .stop-motion-placeholder-box {
+                height: 200px !important;
             }
         }
       </style>
