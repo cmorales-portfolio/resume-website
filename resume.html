@@ -177,34 +177,85 @@
       <section class="resume-section layout-break-clear">
         <h2>Skills</h2>
         
-        <div class="skills-header" style="margin-bottom: 20px;">
-          <img src="images/skills_tech_stack_branded.jpg" alt="Skills and Professional Competencies" style="max-width: 100%; height: auto; border-radius: 4px;">
-        </div>
-        
-        <div class="work-summary">
-          <h3>Technical Tools</h3>
-          <ul>
-            <li>Final Draft</li>
-            <li>Microsoft Office and Google Suite</li>
-            <li>Movie Magic Budgeting and Scheduling</li>
-            <li>Pitch Presentation Design using Canva</li>
-          </ul>
+        <div class="skills-split-layout-grid">
+          
+          <!-- LEFT HAND COLUMN: THE VISUAL FILM SLATE GRAPHIC CARD -->
+          <div class="skills-left-visual-col">
+            <img src="images/skills_tech_stack_branded.jpg" alt="Skills and Professional Competencies" class="skills-slate-photo-frame">
+          </div>
+          
+          <!-- RIGHT HAND COLUMN: COHESIVE SYSTEM LISTINGS -->
+          <div class="skills-right-text-listings-col">
+            <div class="work-summary" style="margin-top: 0; padding: 0;">
+              <h3>Technical Tools</h3>
+              <ul>
+                <li>Final Draft</li>
+                <li>Microsoft Office and Google Suite</li>
+                <li>Movie Magic Budgeting and Scheduling</li>
+                <li>Pitch Presentation Design using Canva</li>
+              </ul>
 
-          <h3>Professional Expertise</h3>
-          <ul>
-            <li>Production Management Expertise</li>
-            <li>Detail-Oriented</li>
-            <li>Script Writing</li>
-            <li>Storyboard Collaboration</li>
-            <li>Video and Film Production Projects</li>
-            <li>Collegial and Active Listener</li>
-            <li>Purpose-Driven Approach</li>
-            <li>Solution-Oriented</li>
-            <li>Screenplay Analysis</li>
-            <li>Teamwork and Collaboration Skills</li>
-          </ul>
+              <h3 style="margin-top: 25px;">Professional Expertise</h3>
+              <ul>
+                <li>Production Management Expertise</li>
+                <li>Detail-Oriented</li>
+                <li>Script Writing</li>
+                <li>Storyboard Collaboration</li>
+                <li>Video and Film Production Projects</li>
+                <li>Collegial and Active Listener</li>
+                <li>Purpose-Driven Approach</li>
+                <li>Solution-Oriented</li>
+                <li>Screenplay Analysis</li>
+                <li>Teamwork and Collaboration Skills</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </section>
+
+      <!-- STYLE ISOLATION BLOCK FOR THE TWIN-COLUMN SKILLS MODULE -->
+      <style>
+        .skills-split-layout-grid {
+            display: flex !important;
+            flex-direction: row !important;
+            width: 100% !important;
+            gap: 40px !important;
+            align-items: flex-start !important;
+            margin-top: 25px !important;
+        }
+        .skills-left-visual-col {
+            flex: 0 0 350px !important; /* Locks width size dimensions precisely */
+            max-width: 350px !important;
+        }
+        .skills-slate-photo-frame {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 6px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .skills-right-text-listings-col {
+            flex: 1 !important;
+        }
+        .skills-right-text-listings-col h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        /* Screen collapse fallback for responsive mobile screens */
+        @media (max-width: 768px) {
+            .skills-split-layout-grid {
+                flex-direction: column !important;
+                gap: 25px !important;
+            }
+            .skills-left-visual-col {
+                flex: 1 1 100% !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+        }
+      </style>
 
       <section class="resume-section">
         <h2>Education</h2>
