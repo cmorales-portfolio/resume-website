@@ -42,16 +42,18 @@
         </div>
       </section>
 
-      <section class="resume-section">
+      <!-- SEPARATED SINGLE COLUMN DESIGN FOR SKIN WALKER -->
+      <section class="resume-section layout-break-clear">
         <h2>Other Film Projects</h2>
 
-        <div class="project-wrapper">
-          <section class="project-item">
-            <img src="images/skinwalker-500px.jpg" srcset="images/skinwalker-1000px.jpg 2x" alt="The Skin Walker">
+        <div class="skin-walker-standalone-block">
+          <section class="project-item" style="width: 100%; max-width: 100%;">
+            <!-- FIXED: EXPLICIT 500PX IMAGE DIMENSION CONSTRAINT CONTROL -->
+            <img src="images/skinwalker-500px.jpg" srcset="images/skinwalker-1000px.jpg 2x" alt="The Skin Walker" style="max-width: 500px; width: 100%; height: auto; display: block; margin-bottom: 15px; border-radius: 4px;">
              <h3>"The Skin Walker" | Feature Film Pitch Deck </h3>
              <p><strong>Based on the historical aftermath of the Jonestown massacre, The Skin Walker is a supernatural horror-thriller following a military base maintenance worker who must confront the vengeful, murderous spirit of cult leader Jim Jones.</strong></p>
              <p>When the bodies of the Jonestown victims are temporarily stored at Fort MacArthur, the base becomes ground zero for a malicious haunting. Decades later, as a series of gruesome "accidental" deaths claims his maintenance crew, a worker must team up with real-world paranormal investigators and a Jesuit priest to exorcise the evil entity before it destroys his life and livelihood.</p>
-             <ul>
+             <ul class="skin-walker-specs">
                <li><strong>Logline & Synopsis:</strong>A high-concept, grounded horror narrative blending true-crime history with intense supernatural stakes.</li>
                <li><strong>Producer's Statement:</strong>Outlines the creative vision and thematic depth of the project.</li>
                <li><strong>Character Breakdown:</strong>Profiles the central and supporting characters driving the emotional and physical conflict of the story.</li>
@@ -59,10 +61,32 @@
                <li><strong>Business Strategy:</strong>A comprehensive roadmap detailing the funding structure, distribution strategy, and marketing social strategy.</li>
              </ul>
           </section>
-        </div> <!-- Fixed: Closed the project-wrapper grid layout container -->
-      </section> <!-- Fixed: Closed the Other Film Projects section container -->
+        </div>
+      </section>
+
+      <!-- STYLE ISOLATION BLOCK FOR NEW ROW BREAK FLOWS -->
+      <style>
+        .layout-break-clear {
+            clear: both !important;
+            display: block !important;
+            width: 100% !important;
+        }
+        .skin-walker-standalone-block {
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+        }
+        .skin-walker-specs {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+        .skin-walker-specs li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+      </style>
      
-      <section class="resume-section">
+      <section class="resume-section layout-break-clear">
         <h2>Skills</h2>
         
         <div class="skills-header" style="margin-bottom: 20px;">
